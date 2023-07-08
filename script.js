@@ -21,7 +21,7 @@ function getMealList(){
         if(data.meals){
             data.meals.forEach(meal => {
                 html += `
-                    <div class = "meal-item" data-id = "${meal.idMeal}" title="${meal.strMeal}" id="${meal.Time}">
+                    <li class = "meal-item" data-id = "${meal.idMeal}" title="${meal.strMeal}" id="${meal.Time}">
                         <div class = "meal-img">
                             <img src = "${meal.strMealThumb}" alt = "food">
                         </div>
@@ -29,7 +29,7 @@ function getMealList(){
                             <h3>${meal.strMeal}</h3>
                             <a href = "#" class = "recipe-btn">Get Recipe</a>
                         </div>
-                    </div>
+                    </li>
                 `;
             });
             mealList.classList.remove('notFound');
