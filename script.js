@@ -26,7 +26,7 @@ function getMealList(){
 
 <div class="mealcard">
 
-                    <div class = "meal-item" data-id = "${meal.idMeal}">
+                <div class = "meal-item" data-id = "${meal.idMeal}">
                         <div id="flip" class = "meal-img">
                             <img  src = "${meal.strMealThumb}" alt = "food">
                         </div>
