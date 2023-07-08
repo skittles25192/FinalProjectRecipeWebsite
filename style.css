@@ -304,11 +304,10 @@ nav a img{
     width: 100%;
 }
 
-.heart{
-
+/* .heart{
     float: left; 
     position: fixed;
-}
+} */
 
 .meal-item:hover{
     /*background-color: #b54507;*/
