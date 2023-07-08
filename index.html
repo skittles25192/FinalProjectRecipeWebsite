@@ -19,20 +19,24 @@ function sortFunction(value)
             sortLowHigh();
     
         }
+        if(value == "time"){
+            sortTime();
+    
+        }
 
 
 }
 
 function sortLowHigh() {
     var list, i, switching, b, shouldSwitch;
-    list = document.getElementById("product-list");
+    list = document.getElementById("meal");
     switching = true;
     /* Make a loop that will continue until
     no switching has been done: */
     while (switching) {
         // Start by saying: no switching is done:
         switching = false;
-        b = list.getElementsByTagName("li");
+        b = list.getElementsByTagName("div");
         // Loop through all list items:
         for (i = 0; i < (b.length - 1); i++) {
             // Start by saying there should be no switching:
@@ -55,14 +59,14 @@ function sortLowHigh() {
 
 function sortName() {
     var list, i, switching, b, shouldSwitch;
-    list = document.getElementById("product-list");
+    list = document.getElementById("meal");
     switching = true;
     /* Make a loop that will continue until
     no switching has been done: */
     while (switching) {
       // Start by saying: no switching is done:
       switching = false;
-      b = list.getElementsByTagName("li");
+      b = list.getElementsByTagName("div");
       // Loop through all list items:
       for (i = 0; i < (b.length - 1); i++) {
         // Start by saying there should be no switching:
@@ -103,7 +107,7 @@ function sortName() {
         <select name="sort" id="sort" onchange="sortFunction(this.value)">
   <option value="" disabled selected>Sort By</option>
   <option value="name">Name</option>
-  <option value="price">Price</option>
+  <option value="price">Time</option>
 
 </select>
       </div>
