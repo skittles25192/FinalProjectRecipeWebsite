@@ -30,8 +30,7 @@ function getMealList(){
                             <h3>${meal.strMeal}</h3>
                             <a href = "#" class = "recipe-btn">Get Recipe</a>
                         </div>
-                    </div>
-                    <div class = "recipe-div" style="opacity:0;">
+                        <div class = "recipe-div" style="height:0px">
                     <h2 class = "recipe-title">${meal.strMeal}</h2>
                     <p class = "recipe-category">${meal.strCategory}</p>
                     <div class = "recipe-instruct">
@@ -45,6 +44,8 @@ function getMealList(){
                         <a href = "${meal.strYoutube}" target = "_blank">Watch Video</a>
                     </div>
                     </div>
+                    </div>
+                    
                 `;
             });
             mealList.classList.remove('notFound');

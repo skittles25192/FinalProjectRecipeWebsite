@@ -314,8 +314,9 @@ nav a img{
     opacity: 0;
 }
 
-.meal-item:hover + .recipe-div{
+.meal-item:hover > .recipe-div{
     opacity:1;
+    height: 300px;
 }
 
 
