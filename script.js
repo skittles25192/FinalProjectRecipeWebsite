@@ -38,8 +38,8 @@ function getMealList(){
 
 
 
-                <div class = "recipe-div" style="height:0px">
-                <a class="heart" href="#"> <img src="" alt="here is the icon"> </a>
+                <div class = "recipe-div" style="height:0px; position:fixed;">
+                <a class="heart" href="#"> <img src="/iconmonstr-favorite-4.svg" alt="here is the icon"> </a>
                     <h2 class = "recipe-title">${meal.strMeal}</h2>
                     <p class = "recipe-category">${meal.strCategory}</p>
                 
