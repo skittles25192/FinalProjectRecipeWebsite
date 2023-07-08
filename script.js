@@ -30,7 +30,7 @@ function getMealList(){
                             <h3>${meal.strMeal}</h3>
                             <a href = "#" class = "recipe-btn">Get Recipe</a>
                         </div>
-                    </div>
+                    </li>
                 `;
             });
             mealList.classList.remove('notFound');

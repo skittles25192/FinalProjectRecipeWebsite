@@ -6,6 +6,90 @@
   <title>Find Meal For Your Ingredients</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
   <link rel = "stylesheet" href = "style.css">
+  <script>
+
+function sortFunction(value)
+{
+
+    if(value == "name"){
+            sortName();
+    
+        }
+        if(value == "price"){
+            sortLowHigh();
+    
+        }
+        if(value == "time"){
+            sortTime();
+    
+        }
+
+
+}
+
+function sortLowHigh() {
+    var list, i, switching, b, shouldSwitch;
+    list = document.getElementById("meal");
+    switching = true;
+    /* Make a loop that will continue until
+    no switching has been done: */
+    while (switching) {
+        // Start by saying: no switching is done:
+        switching = false;
+        b = list.getElementsByTagName("div");
+        // Loop through all list items:
+        for (i = 0; i < (b.length - 1); i++) {
+            // Start by saying there should be no switching:
+            shouldSwitch = false;
+            /* Check if the next item should
+            switch place with the current item: */
+            if (Number(b[i].id) > Number(b[i + 1].id)) {
+                shouldSwitch = true;
+                break;
+            }
+        }
+        if (shouldSwitch) {
+            /* If a switch has been marked, make the switch
+            and mark the switch as done: */
+            b[i].parentNode.insertBefore(b[i + 1], b[i]);
+            switching = true;
+        }
+    }
+}
+
+function sortName() {
+    var list, i, switching, b, shouldSwitch;
+    list = document.getElementById("meal");
+    switching = true;
+    /* Make a loop that will continue until
+    no switching has been done: */
+    while (switching) {
+      // Start by saying: no switching is done:
+      switching = false;
+      b = list.getElementsByTagName("li");
+      // Loop through all list items:
+      for (i = 0; i < (b.length - 1); i++) {
+        // Start by saying there should be no switching:
+        shouldSwitch = false;
+        /* Check if the next item should
+        switch place with the current item: */
+        if (b[i].title.toLowerCase() > b[i + 1].title.toLowerCase()) {
+          /* If next item is alphabetically lower than current item,
+          mark as a switch and break the loop: */
+          shouldSwitch = true;
+          break;
+        }
+      }
+      if (shouldSwitch) {
+        /* If a switch has been marked, make the switch
+        and mark the switch as done: */
+        b[i].parentNode.insertBefore(b[i + 1], b[i]);
+        switching = true;
+      }
+    }
+  }
+
+    </script>
 </head>
 <body>
 <!--   <header class="divider">
@@ -35,16 +119,19 @@
     <div class = "meal-wrapper">
       <div class = "meal-search">
         <h2 class = "title">Find Meals For Your Ingredients</h2>
-        <blockquote>Real food doesn't have ingredients, real food is ingredients.<br>
-          <cite>- Jamie Oliver</cite>
-        </blockquote>
-
+        
         <div class = "meal-search-box">
           <input type = "text" class = "search-control" placeholder="Enter an ingredient" id = "search-input">
           <button type = "submit" class = "search-btn btn" id = "search-btn">
             <i class = "fas fa-search"></i>
           </button>
         </div>
+        <select name="sort" id="sort" onchange="sortFunction(this.value)">
+  <option value="" disabled selected>Sort By</option>
+  <option value="name">Name</option>
+  <option value="price">Time</option>
+
+</select>
       </div>
 
       <div class = "meal-result">
@@ -96,5 +183,7 @@
 
 
   <script src = "script.js"></script>
+  <script type="module" src="../js/product-list.js" defer></script>
+
 </body>
 </html>
