@@ -21,7 +21,6 @@ function getMealList(){
         let html = "";
         if(data.meals){
             data.meals.forEach(meal => {
-                getMealRecipe(meal);
 
                 html += `
                     <div class = "meal-item" data-id = "${meal.idMeal}">
@@ -32,7 +31,7 @@ function getMealList(){
                             <h3>${meal.strMeal}</h3>
                             <a href = "#" class = "recipe-btn">Get Recipe</a>
                         </div>
-                        <div class = "recipe-div" style="height:0px">
+                        <div class = "recipe-div" style="height:300px">
                     <h2 class = "recipe-title">${meal.strMeal}</h2>
                     <p class = "recipe-category">${meal.strCategory}</p>
                     <div class = "recipe-instruct">
