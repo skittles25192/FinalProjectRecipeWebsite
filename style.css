@@ -311,6 +311,11 @@ nav a img{
     /*transform: perspective(500px) rotateY(180deg);*/
     transition: 1s;
     transform: perspective(500px) rotateY(180deg);
+    opacity: 0;
+}
+
+.meal-item:hover + .recipe-div{
+    opacity:1;
 }
 
 
