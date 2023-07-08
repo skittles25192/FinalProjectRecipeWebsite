@@ -21,7 +21,7 @@ function getMealList(){
         let html = "";
         if(data.meals){
             data.meals.forEach(meal => {
-                getMealRecipe("#");
+                getMealRecipe(meal);
 
                 html += `
                     <div class = "meal-item" data-id = "${meal.idMeal}">
@@ -62,10 +62,8 @@ function getMealList(){
 
 
 // get recipe of the meal
-function getMealRecipe(e){
-    e.preventDefault();
-    
-        let mealItem = e.target.parentElement.parentElement;
+function getMealRecipe(e){    
+        let mealItem = e;
         fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealItem.dataset.id}`)
         .then(response => response.json())
         .then(data => mealRecipeModal(data.meals));
