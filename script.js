@@ -21,7 +21,7 @@ function getMealList(){
         let html = "";
         if(data.meals){
             data.meals.forEach(meal => {
-                getMealRecipe();
+                getMealRecipe("#");
 
                 html += `
                     <div class = "meal-item" data-id = "${meal.idMeal}">
