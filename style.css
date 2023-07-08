@@ -304,7 +304,11 @@ nav a img{
     width: 100%;
 }
 
+.heart{
 
+    float: left; 
+    position: fixed;
+}
 
 .meal-item:hover{
     /*background-color: #b54507;*/
@@ -312,11 +316,12 @@ nav a img{
     transition: 1s;
     transform: perspective(500px) rotateY(180deg);
     opacity: 0;
+    height: 0px;
 }
 
 .meal-item:hover > .recipe-div{
     opacity:1;
-    height: 300px;
+    height: 500px;
 }
 
 
