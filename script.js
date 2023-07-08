@@ -8,6 +8,7 @@ searchBtn.addEventListener('click', getMealList);
 mealList.addEventListener('click', getMealRecipe);
 recipeCloseBtn.addEventListener('click', () => {
     mealDetailsContent.parentElement.classList.remove('showRecipe');
+    
 });
 
 
@@ -21,9 +22,9 @@ function getMealList(){
         if(data.meals){
             data.meals.forEach(meal => {
                 html += `
-                    <li class = "meal-item" data-id = "${meal.idMeal}" title="${meal.strMeal}" id="${meal.Time}">
-                        <div class = "meal-img">
-                            <img src = "${meal.strMealThumb}" alt = "food">
+                    <div class = "meal-item" data-id = "${meal.idMeal}">
+                        <div id="flip" class = "meal-img">
+                            <img  src = "${meal.strMealThumb}" alt = "food">
                         </div>
                         <div class = "meal-name">
                             <h3>${meal.strMeal}</h3>
