@@ -321,6 +321,7 @@ nav a img{
 .mealcard:hover > .recipe-div{
     opacity:1;
     height: 500px;
+    background-color: #304269;
 }
 
 
