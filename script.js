@@ -23,6 +23,9 @@ function getMealList(){
             data.meals.forEach(meal => {
 
                 html += `
+
+<div class="mealcard">
+
                     <div class = "meal-item" data-id = "${meal.idMeal}">
                         <div id="flip" class = "meal-img">
                             <img  src = "${meal.strMealThumb}" alt = "food">
@@ -31,9 +34,15 @@ function getMealList(){
                             <h3>${meal.strMeal}</h3>
                             <a href = "#" class = "recipe-btn">Get Recipe</a>
                         </div>
-                        <div class = "recipe-div" style="height:300px">
+                 </div>
+
+
+
+                <div class = "recipe-div" style="height:0px">
+                <a class="heart" href="#"> <img src="" alt="here is the icon"> </a>
                     <h2 class = "recipe-title">${meal.strMeal}</h2>
                     <p class = "recipe-category">${meal.strCategory}</p>
+                
                     <div class = "recipe-instruct">
                         <h3>Instructions:</h3>
                         <p>${meal.strInstructions}</p>
@@ -44,8 +53,9 @@ function getMealList(){
                     <div class = "recipe-link">
                         <a href = "${meal.strYoutube}" target = "_blank">Watch Video</a>
                     </div>
-                    </div>
-                    </div>
+                </div>
+
+</div>
                     
                 `;
             });
