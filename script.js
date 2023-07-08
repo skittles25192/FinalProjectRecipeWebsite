@@ -21,6 +21,8 @@ function getMealList(){
         let html = "";
         if(data.meals){
             data.meals.forEach(meal => {
+                mealRecipeModal(meal);
+
                 html += `
                     <div class = "meal-item" data-id = "${meal.idMeal}">
                         <div id="flip" class = "meal-img">
@@ -48,7 +50,6 @@ function getMealList(){
                     
                 `;
             });
-            mealRecipeModal(meal);
             mealList.classList.remove('notFound');
         } else{
             html = "Sorry, we didn't find any meal!";
