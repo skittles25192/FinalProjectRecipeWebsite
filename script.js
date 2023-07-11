@@ -1,5 +1,5 @@
 const searchBtn = document.getElementById('search-btn');
-const mealList = document.getElementsByClassName('recipe-button');
+const mealList = document.getElementById('recipe-button');
 
 const mealDetailsContent = document.querySelector('.meal-details-content');
 const recipeCloseBtn = document.getElementById('recipe-close-btn');
@@ -34,7 +34,7 @@ function getMealList(){
                         </div>
                         <div class = "meal-name">
                             <h3>${meal.strMeal}</h3>
-                            <a href = "#" class = "recipe-btn">Get Recipe</a>
+                            <a href = "#" id = "recipe-btn">Get Recipe</a>
                         </div>
                  </div>
 
