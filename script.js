@@ -1,4 +1,4 @@
-import { setLocalStorage, getLocalStorage} from './localstorage.js';
+import { setLocalStorage, getLocalStorage} from 'localstorage.js';
 
 const searchBtn = document.getElementById('search-btn');
 const mealList = document.getElementById('meal');
