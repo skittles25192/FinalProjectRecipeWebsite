@@ -67,7 +67,6 @@ function getMealList(){
         }
 
         mealList.innerHTML = html;
-        document.getElementById('heart').addEventListener('click', () => addProductToCart(meal));
 
     });
 }
@@ -139,6 +138,7 @@ function updateCartCount() {
 
 loadAsyncFn();
 updateCartCount();
+document.getElementById('heart').addEventListener('click', () => addProductToCart(meal));
 
 
 
