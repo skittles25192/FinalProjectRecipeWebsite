@@ -39,6 +39,8 @@ async function loadAsyncFn() {
 function addProductToCart(product) {
     const currentCart = getLocalStorage('FavoritesList') || [];
     const updatedCart = [...currentCart, product];
+    updateCartCount();
+
     setLocalStorage('FavoritesList', updatedCart);
   }
 
