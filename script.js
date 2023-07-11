@@ -1,3 +1,5 @@
+import { setLocalStorage, getLocalStorage} from './localstorage.js';
+
 const searchBtn = document.getElementById('search-btn');
 const mealList = document.getElementById('meal');
 const mealDetailsContent = document.querySelector('.meal-details-content');
