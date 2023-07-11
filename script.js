@@ -1,4 +1,3 @@
-import { setLocalStorage, getLocalStorage} from 'localstorage.js';
 
 const searchBtn = document.getElementById('search-btn');
 const mealList = document.getElementById('meal');
@@ -113,6 +112,14 @@ function mealRecipeModal(meal){
     mealDetailsContent.innerHTML = html;
     mealDetailsContent.parentElement.classList.add('showRecipe');
 }
+
+function getLocalStorage(key) {
+    return JSON.parse(localStorage.getItem(key));
+  }
+  // save data to local storage
+function setLocalStorage(key, data) {
+    localStorage.setItem(key, JSON.stringify(data));
+  }
 
 loadAsyncFn();
 getMealList();
