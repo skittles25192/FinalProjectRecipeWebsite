@@ -116,8 +116,6 @@ function addProductToCart(meal) {
   async function loadAsyncFn() {
     try {
 
-        await productDetails(mealid);
-
         updateCartCount();
         const addToCartBtn = document.querySelector('heart');
         if (addToCartBtn) {
