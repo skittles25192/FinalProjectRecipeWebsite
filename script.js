@@ -3,7 +3,9 @@ const mealList = document.getElementById('meal');
 const mealDetailsContent = document.querySelector('.meal-details-content');
 const recipeCloseBtn = document.getElementById('recipe-close-btn');
 
+
 // event listeners
+document.getElementById('heart').addEventListener('click', () => addProductToCart());
 searchBtn.addEventListener('click', getMealList);
 mealList.addEventListener('click', getMealRecipe);
 recipeCloseBtn.addEventListener('click', () => {
@@ -101,4 +103,46 @@ function mealRecipeModal(meal){
 }
 
 getMealList()
+
+function addProductToCart(e) {
+    let mealItem = e;
+        fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealItem.dataset.id}`)
+        .then(response => response.json())
+        let meal = data.meals;
+
+    const currentCart = getLocalStorage('Favorite-Recipes') || [];
+    const updatedCart = [...currentCart, meal];
+    setLocalStorage('Favorite-Recipes', updatedCart);
+  }
+
+  async function loadAsyncFn() {
+    try {
+
+        await productDetails(mealid);
+
+        updateCartCount();
+        const addToCartBtn = document.querySelector('.heart');
+        if (addToCartBtn) {
+            addToCartBtn.addEventListener('click', () => {
+            updateCartCount();
+            });
+        }
+    } catch (error) {
+        alert('Error loading header and footer or Product Details: ' + error);
+    }
+}
+
+function updateCartCount() {
+    const itemCountElement = document.querySelector('#itemCount');
+    const itemCount = JSON.parse(localStorage.getItem('Favorite-Recipes')).length;
+  
+    if (itemCount) {
+      itemCountElement.textContent = itemCount;
+    }
+  }
+
+loadAsyncFn();
+updateCartCount();
+
+
 
