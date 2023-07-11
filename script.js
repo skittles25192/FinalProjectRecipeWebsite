@@ -7,7 +7,8 @@ const recipeCloseBtn = document.getElementById('recipe-close-btn');
 searchBtn.addEventListener('click', getMealList);
 mealList.addEventListener('click', getMealRecipe);
 recipeCloseBtn.addEventListener('click', () => {
-    mealDetailsContent.parentElement.classList.remove('showRecipe');
+mealDetailsContent.parentElement.classList.remove('showRecipe');
+
     
 });
 
@@ -33,6 +34,12 @@ async function loadAsyncFn() {
         alert('Error loading header and footer or Product Details: ' + error);
     }
 }
+
+function addProductToCart(product) {
+    const currentCart = getLocalStorage('FavoritesList') || [];
+    const updatedCart = [...currentCart, product];
+    setLocalStorage('FavoritesList', updatedCart);
+  }
 
 // get meal list that matches with the ingredients
 function getMealList(){
@@ -69,6 +76,8 @@ function getMealList(){
         }
 
         mealList.innerHTML = html;
+        document.getElementById('heart').addEventListener('click', () => addProductToCart(meal));
+
     });
 }
 
@@ -103,4 +112,6 @@ function mealRecipeModal(meal){
     mealDetailsContent.parentElement.classList.add('showRecipe');
 }
 
-getMealList()
+loadAsyncFn();
+getMealList();
+
