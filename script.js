@@ -1,5 +1,6 @@
 const searchBtn = document.getElementById('search-btn');
-const mealList = document.getElementById('meal');
+const mealList = document.getElementsByClassName('recipe-button');
+
 const mealDetailsContent = document.querySelector('.meal-details-content');
 const recipeCloseBtn = document.getElementById('recipe-close-btn');
 
@@ -61,7 +62,6 @@ function getMealList(){
                     
                 `;
             });
-            document.querySelector('#heart').dataset.id = meal.idMeal;
 
             mealList.classList.remove('notFound');
         } else{
@@ -141,7 +141,9 @@ function updateCartCount() {
 
 loadAsyncFn();
 updateCartCount();
-document.getElementById('heart').addEventListener('click', () => addProductToCart(meal));
+const favoritebutton = document.getElementById('heart');
+
+favoritebutton.addEventListener('click', () => addProductToCart(meal));
 
 
 
