@@ -67,7 +67,7 @@ function getMealList(){
         }
 
         mealList.innerHTML = html;
-        document.getElementById('heart').addEventListener('click', () => addProductToCart());
+        document.getElementById('heart').addEventListener('click', () => addProductToCart(meal));
 
     });
 }
@@ -105,11 +105,8 @@ function mealRecipeModal(meal){
 
 getMealList()
 
-function addProductToCart(e) {
-    let mealItem = e;
-        fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealItem.dataset.id}`)
-        .then(response => response.json())
-        let meal = data.meals;
+function addProductToCart(meal) {
+    
 
     const currentCart = getLocalStorage('Favorite-Recipes') || [];
     const updatedCart = [...currentCart, meal];
@@ -122,14 +119,14 @@ function addProductToCart(e) {
         await productDetails(mealid);
 
         updateCartCount();
-        const addToCartBtn = document.querySelector('.heart');
+        const addToCartBtn = document.querySelector('heart');
         if (addToCartBtn) {
             addToCartBtn.addEventListener('click', () => {
             updateCartCount();
             });
         }
     } catch (error) {
-        alert('Error loading header and footer or Product Details: ' + error);
+        alert('Error loading favorites list ' + error);
     }
 }
 
