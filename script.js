@@ -5,7 +5,6 @@ const recipeCloseBtn = document.getElementById('recipe-close-btn');
 
 
 // event listeners
-document.getElementById('heart').addEventListener('click', () => addProductToCart());
 searchBtn.addEventListener('click', getMealList);
 mealList.addEventListener('click', getMealRecipe);
 recipeCloseBtn.addEventListener('click', () => {
