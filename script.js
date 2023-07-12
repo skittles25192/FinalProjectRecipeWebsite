@@ -92,6 +92,8 @@ function getMealList(){
 
                     
                 `;
+                getMealRecipe(meal);
+
           });
             mealList.classList.remove('notFound');
         } else{
@@ -99,7 +101,6 @@ function getMealList(){
             mealList.classList.add('notFound');
         }
 
-        getMealRecipe(this);
 
         mealList.innerHTML = html;
 
