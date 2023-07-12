@@ -111,7 +111,7 @@ function getMealList(){
 // get recipe of the meal
 function getMealRecipe(e){    
         let mealItem = e;
-        fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealItem.dataset.id}`)
+        fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealItem.idMeal}`)
         .then(response => response.json())
         .then(data => mealRecipeModal(data.meals));
 }
