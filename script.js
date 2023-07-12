@@ -13,7 +13,6 @@ mealDetailsContent.parentElement.classList.remove('showRecipe');
 
 // event listeners
 searchBtn.addEventListener('click', getMealList);
-likebutton.addEventListener('click', addProductToCart());
 
 function updateCartCount() {
     const itemCountElement = document.querySelector('#itemCount');
@@ -94,6 +93,8 @@ function getMealList(){
                     
                 `;
                getMealRecipe(meal);
+               likebutton.addEventListener('click', addProductToCart(meal));
+
 
           });
             mealList.classList.remove('notFound');
