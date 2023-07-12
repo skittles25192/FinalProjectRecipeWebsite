@@ -89,7 +89,6 @@ function getMealList(){
         </div>
                     
                 `;
-          getMealRecipe();
           });
             mealList.classList.remove('notFound');
         } else{
