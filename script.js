@@ -54,7 +54,7 @@ function getMealList(){
     .then(data => {
         let html = "";
         if(data.meals){
-            data.meals.forEach(meal => {
+            data.meals.forEach(async meal => {
 
                 html += `
 
@@ -92,7 +92,7 @@ function getMealList(){
 
                     
                 `;
-                getMealRecipe(meal);
+               await getMealRecipe(meal);
 
           });
             mealList.classList.remove('notFound');
@@ -109,7 +109,7 @@ function getMealList(){
 
 
 // get recipe of the meal
-function getMealRecipe(e){    
+async function getMealRecipe(e){    
         let mealItem = e;
         fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealItem.idMeal}`)
         .then(response => response.json())
