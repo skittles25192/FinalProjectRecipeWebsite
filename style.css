@@ -208,10 +208,12 @@ nav a img{
 /* js related */
 .showRecipe{
     display: block;
+
 }
 
 .meal-details-content{
     margin: 2rem;
+    background-color: rgb(156, 252, 0);
 }
 .meal-details-content p:not(.recipe-category){
     padding: 1rem 0;
@@ -238,6 +240,7 @@ nav a img{
 .recipe-title{
     letter-spacing: 1px;
     padding-bottom: 1rem;
+    background-color: #b54507;
 }
 .recipe-category{
     background: #fff;
@@ -250,6 +253,7 @@ nav a img{
     -moz-border-radius: 0.3rem;
     -ms-border-radius: 0.3rem;
     -o-border-radius: 0.3rem;
+    
 }
 .recipe-category{
     background: #fff;
@@ -265,10 +269,11 @@ nav a img{
 }
 .recipe-instruct{
     padding: 1rem 0;
+    background-color: #d00d0d;
 }
 .recipe-meal-img img{
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
@@ -279,6 +284,7 @@ nav a img{
 }
 .recipe-link{
     margin: 1.4rem 0;
+    background-color: #304269;
 }
 .recipe-link a{
     color: #fff;
@@ -308,9 +314,12 @@ nav a img{
     float: left; 
     position: fixed;
 } */
-svg{
-    fill:red;
-    
+svg, .heart span{
+    margin: 5px;
+     
+}
+.heart button{border-radius: 50px;
+    width: 60px;  
 }
 .meal-item:hover{
     /*background-color: #b54507;*/
@@ -326,6 +335,28 @@ svg{
     background-color: #304269;
 }
 
+.recipe-div{
+    background-color: aqua;
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 60px auto 1fr;
+}
+
+.recipe-link{
+    grid-column: 1/3;
+    background-color: chartreuse;
+}
+.heart{
+    grid-column: 1/3;
+    background-color: chartreuse;
+    text-align: left;
+}
+.div_tittle{background-color: rgb(18, 12, 11);
+    grid-column: 1/3;
+}
+.recipe-meal-img{
+    align-self: center;
+}
 
 /* Media Queries */
 @media screen and (min-width: 600px){
