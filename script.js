@@ -98,7 +98,7 @@ function getMealList(){
             mealList.classList.add('notFound');
         }
 
-        getMealRecipe();
+        getMealRecipe(this);
 
         mealList.innerHTML = html;
 
