@@ -95,7 +95,7 @@ function getMealList(){
         }
 
         mealList.innerHTML = html;
-        document.getElementById('heart').addEventListener('click', () => addProductToCart(meal.dataset.id));
+        document.getElementById('heart').addEventListener('click', () => addProductToCart(meal));
 
     });
 }
