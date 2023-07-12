@@ -89,7 +89,8 @@ function getMealList(){
         </div>
                     
                 `;
-            });
+          getMealRecipe();
+          });
             mealList.classList.remove('notFound');
         } else{
             html = "Sorry, we didn't find any meal!";
@@ -97,7 +98,6 @@ function getMealList(){
         }
 
         mealList.innerHTML = html;
-        document.getElementById('heart').addEventListener('click', () => addProductToCart(meal));
 
     });
 }
