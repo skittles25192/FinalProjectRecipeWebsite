@@ -86,7 +86,6 @@ function getMealList(){
                     
                 `;
 
-                document.getElementById('heart').addEventListener('click', () => addProductToCart(meal));
 
             }
             
@@ -140,6 +139,8 @@ function getLocalStorage(key) {
 function setLocalStorage(key, data) {
     localStorage.setItem(key, JSON.stringify(data));
   }
+  document.getElementById('heart').addEventListener('click', () => addProductToCart(this));
+
 
 loadAsyncFn();
 getMealList();
