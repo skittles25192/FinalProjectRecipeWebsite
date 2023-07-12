@@ -1,12 +1,19 @@
 
 const searchBtn = document.getElementById('search-btn');
 const mealList = document.getElementById('meal');
+const likebutton = document.getElementById('heart');
 const mealDetailsContent = document.querySelector('.meal-details-content');
 const recipeCloseBtn = document.getElementById('recipe-close-btn');
+recipeCloseBtn.addEventListener('click', () => {
+mealDetailsContent.parentElement.classList.remove('showRecipe');
+    
+    
+    });
+
 
 // event listeners
 searchBtn.addEventListener('click', getMealList);
-//mealList.addEventListener('click', getMealRecipe);
+likebutton.addEventListener('click', addProductToCart());
 
 function updateCartCount() {
     const itemCountElement = document.querySelector('#itemCount');
@@ -106,13 +113,9 @@ function getMealList(){
 // get recipe of the meal
 function getMealRecipe(e){    
         let mealItem = e;
-        try{
         fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealItem.idMeal}`)
         .then(response => response.json())
-        .then(data => mealRecipeModal(data.meals));}
-        catch{
-
-        }
+        .then(data => mealRecipeModal(data.meals));
 }
 
 // create a modal
@@ -134,6 +137,7 @@ function mealRecipeModal(meal){
         </div>
     `;
     mealDetailsContent.innerHTML = html;
+    mealDetailsContent.parentElement.classList.add('showRecipe');
 }
 
 
