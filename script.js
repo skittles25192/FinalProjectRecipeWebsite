@@ -49,7 +49,7 @@ function getMealList(){
     .then(data => {
         let html = "";
         if(data.meals){
-            data.meals.forEach(async meal => {
+            data.meals.forEach(meal => {
 
                 html += `
 
@@ -111,7 +111,7 @@ function getMealRecipe(e){
         .then(response => response.json())
         .then(data => mealRecipeModal(data.meals));}
         catch{
-            
+
         }
 }
 
