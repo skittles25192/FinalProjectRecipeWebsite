@@ -1,3 +1,4 @@
+
 const searchBtn = document.getElementById('search-btn');
 const mealList = document.getElementById('meal');
 const mealDetailsContent = document.querySelector('.meal-details-content');
@@ -5,12 +6,45 @@ const recipeCloseBtn = document.getElementById('recipe-close-btn');
 
 // event listeners
 searchBtn.addEventListener('click', getMealList);
-mealList.addEventListener('click', getMealRecipe);
+//mealList.addEventListener('click', getMealRecipe);
 recipeCloseBtn.addEventListener('click', () => {
-    mealDetailsContent.parentElement.classList.remove('showRecipe');
+mealDetailsContent.parentElement.classList.remove('showRecipe');
+
     
 });
 
+function updateCartCount() {
+    const itemCountElement = document.querySelector('#itemCount');
+    const itemCount = JSON.parse(localStorage.getItem('FavoritesList')).length;
+  
+    if (itemCount) {
+      itemCountElement.textContent = itemCount;
+    }
+  }
+
+async function loadAsyncFn() {
+    try {
+        const currentCart = getLocalStorage('FavoritesList') || [];
+
+        updateCartCount();
+        const addToCartBtn = document.querySelector('#heart');
+        if (addToCartBtn) {
+            addToCartBtn.addEventListener('click', () => {
+            updateCartCount();
+            });
+        }
+    } catch (error) {
+        alert('Error loading header and footer or Product Details: ' + error);
+    }
+}
+
+function addProductToCart(product) {
+    const currentCart = getLocalStorage('FavoritesList') || [];
+    const updatedCart = [...currentCart, product];
+    updateCartCount();
+
+    setLocalStorage('FavoritesList', updatedCart);
+  }
 
 // get meal list that matches with the ingredients
 function getMealList(){
@@ -32,14 +66,13 @@ function getMealList(){
                         </div>
                         <div class = "meal-name">
                             <h3>${meal.strMeal}</h3>
-                            <a href = "#" class = "recipe-btn">Get Recipe</a>
                         </div>
                  </div>
 
+</div>
 
-
-                <div class = "recipe-div" style="height:500px;">
-                    <div class="heart">
+<div class = "recipe-div" style="height:500px;">
+            <div id="heart">
                     <button id="like"><?xml version="1.0" encoding="UTF-8"?>
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="45px" height="45px" viewBox="0 0 45 45" version="1.1">
                     <g id="surface1">
@@ -47,29 +80,27 @@ function getMealList(){
                     </g>
                     </svg> 
                     <span id="like_text"></span>
-                    </button>
+            </button>
 
 
                     </div>
                     <div class="div_tittle"><h2 class = "recipe-title">${meal.strMeal}</h2>
-                    <p class = "recipe-category">${meal.strCategory}</p></div>
-                
-                    <div class = "recipe-instruct">
-                        <h3>Instructions:</h3>
-                        <p>${meal.strInstructions}</p>
-                    </div>
-                    <div class = "recipe-meal-img">
-                        <img src = "${meal.strMealThumb}" alt = "">
-                    </div>
-                    <div class = "recipe-link">
-                        <a href = "${meal.strYoutube}" target = "_blank">Watch Video</a>
-                    </div>
-                </div>
-
-</div>
+            <p class = "recipe-category">${meal.strCategory}</p></div>
+        
+            <div class = "recipe-instruct">
+                <h3>Instructions:</h3>
+                <p>${meal.strInstructions}</p>
+            </div>
+            <div class = "recipe-meal-img">
+                <img src = "${meal.strMealThumb}" alt = "">
+            </div>
+            <div class = "recipe-link">
+                <a href = "${meal.strYoutube}" target = "_blank">Watch Video</a>
+            </div>
+        </div>
                     
                 `;
-            });
+          });
             mealList.classList.remove('notFound');
         } else{
             html = "Sorry, we didn't find any meal!";
@@ -77,6 +108,7 @@ function getMealList(){
         }
 
         mealList.innerHTML = html;
+
     });
 }
 
@@ -112,19 +144,4 @@ function mealRecipeModal(meal){
 }
 
 getMealList()
-
-let buton = document.getElementById("like");
-let times = 0
-let text = document.getElementById("like_text");
-buton.addEventListener("click", changetext);
-     function changetext(){
-        times +=1;
-        if ((times % 2) === 1){
-        document.getElementById("like_text").innerHTML = "like";
-        }
-        else if ((times % 2) === 0) {
-        document.getElementById("like_text").innerHTML = "dislike";
-        } 
-        
-}
 
