@@ -314,18 +314,12 @@ nav a img{
     float: left; 
     position: fixed;
 } */
-<<<<<<< HEAD
 svg, .heart span{
     margin: 5px;
      
 }
 .heart button{border-radius: 50px;
     width: 60px;  
-=======
-svg{
-    fill:red;
-    
->>>>>>> f74bd8098f9b053b88620ee21b12e443d6b4f194
 }
 .meal-item:hover{
     /*background-color: #b54507;*/
