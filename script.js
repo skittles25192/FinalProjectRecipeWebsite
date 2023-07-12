@@ -136,7 +136,6 @@ function mealRecipeModal(meal){
     mealDetailsContent.innerHTML = html;
 }
 
-getMealList()
 
 function getLocalStorage(key) {
     return JSON.parse(localStorage.getItem(key));
