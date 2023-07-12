@@ -87,7 +87,7 @@ function getMealList(){
 
                     
                 `;
-               await getMealRecipe(meal);
+               getMealRecipe(meal);
 
           });
             mealList.classList.remove('notFound');
@@ -104,7 +104,7 @@ function getMealList(){
 
 
 // get recipe of the meal
-async function getMealRecipe(e){    
+function getMealRecipe(e){    
         let mealItem = e;
         fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealItem.idMeal}`)
         .then(response => response.json())
