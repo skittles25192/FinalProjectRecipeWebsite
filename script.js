@@ -32,6 +32,8 @@ function addProductToCart(product) {
     const currentCart = getLocalStorage('FavoritesList') || [];
     const updatedCart = [...currentCart, product];
     setLocalStorage('FavoritesList', updatedCart);
+    updateCartCount();
+
   }
 
 // get meal list that matches with the ingredients
@@ -106,7 +108,6 @@ function mealRecipeModal(meal){
     mealDetailsContent.parentElement.classList.add('showRecipe');
     const favoritebutton = document.getElementById('heart');
     favoritebutton.addEventListener('click', addProductToCart(meal));
-    favoritebutton.addEventListener('click', updateCartCount);
 
 
 

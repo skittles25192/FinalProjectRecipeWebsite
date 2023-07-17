@@ -110,7 +110,7 @@ function sortName() {
     <ul>
       <li><a href="#">Home</a></li>
       <li><a href="#">favorites recipes</a></li>
-      <li><a href="#"><img src="iconmonstr-tiles-list-lined.svg" alt=""></a>
+      <li><a  id="FavoritesMenu" href="#" onclick="openRightMenu()"><img src="iconmonstr-tiles-list-lined.svg" alt=""></a>
         <div id="superscript">
           <span id="itemCount">0</span>
         </div></li>
@@ -185,12 +185,29 @@ function sortName() {
       
     </div>
   </div>
+
+  <div class="w3-sidebar w3-bar-block w3-card w3-animate-right" style="display:none;right:0;" id="rightMenu">
+    <button onclick="closeRightMenu()" class="w3-bar-item w3-button w3-large">Close &times;</button>
+    <a href="#" class="w3-bar-item w3-button">Link 1</a>
+    <a href="#" class="w3-bar-item w3-button">Link 2</a>
+    <a href="#" class="w3-bar-item w3-button">Link 3</a>
+  </div>
   <footer>
     
   </footer>
 
 
   <script src = "script.js"></script>
+
+  <script>
+    function openRightMenu() {
+  document.getElementById("rightMenu").style.display = "block";
+}
+
+function closeRightMenu() {
+  document.getElementById("FavoritesMenu").style.display = "none";
+}
+  </script>
 
 </body>
 </html>
