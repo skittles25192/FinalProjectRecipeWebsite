@@ -114,6 +114,48 @@ function mealRecipeModal(meal){
 
 }
 
+function ShoppingCart() {
+    const cartItems = getLocalStorage('FavoritesList');
+    const cartElement = document.querySelector('.product-list');  
+    renderListWithTemplate(cartItemTemplate, cartElement, cartItems);
+    //functionality to add total
+    const itemCount = cartItems ? cartItems.length : 0;
+    //Add the subtotal to the cart page
+   
+  }
+
+
+  function cartItemTemplate(item) {
+    const newItem =  
+
+`<div class="meal-item" data-id = "${item.idMeal}">
+    <img src = "${item.strMealThumb}" alt = "food"/>
+    </div>
+     
+   
+    <div class="meal-name">
+    <h3>${item.strMeal}</h3>
+    <a href = "#" class = "recipe-btn">Get Recipe</a>
+    </div>
+    </div>`
+
+   
+  
+  ;
+  
+    return newItem;
+  }
+
+
+  function renderListWithTemplate(templateFn, parentElement, list, position = 'afterbegin', clear = true) {
+
+    if (clear) {
+      parentElement.innerHTML = '';
+    }
+    const htmlStrings =  list.map(templateFn);
+    parentElement.insertAdjacentHTML(position, htmlStrings.join(''));
+  }
+
 function getLocalStorage(key) {
     return JSON.parse(localStorage.getItem(key));
   }
