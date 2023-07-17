@@ -410,6 +410,6 @@ svg, .heart span{
     margin-left: 50px;
   }
 
-  .meal-item{
-    background-color: #d00d0d;
-  }
+.meal-name{
+    background-color: #818181;
+}
