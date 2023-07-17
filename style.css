@@ -44,6 +44,9 @@ nav a img{
     width: 40px;
     height: 40px;
 }
+#FavoritesMenu{
+    justify-content: right;
+}
 
 
 /*  */
