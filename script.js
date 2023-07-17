@@ -108,7 +108,7 @@ function mealRecipeModal(meal){
     mealDetailsContent.innerHTML = html;
     mealDetailsContent.parentElement.classList.add('showRecipe');
     const favoritebutton = document.getElementById('heart');
-    favoritebutton.addEventListener('click', addProductToCart(meal));
+    favoritebutton.addEventListener('click', function(){ addProductToCart(meal)});
 
 
 
