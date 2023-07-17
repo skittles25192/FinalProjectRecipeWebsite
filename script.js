@@ -72,30 +72,12 @@ function getMealList(){
                         </div>
                  </div>
 
-        <div class = "recipe-div" style="height:500px;">
-            <h2 class = "recipe-title">${meal.strMeal}</h2>
-            <p class = "recipe-category">${meal.strCategory}</p>
-
-        
-            <div class = "recipe-instruct">
-                <h3>Instructions:</h3>
-                <p>${meal.strInstructions}</p>
-            </div>
-            <div class = "recipe-meal-img">
-                <img src = "${meal.strMealThumb}" alt = "">
-            </div>
-            <div class = "recipe-link">
-                <a href = "${meal.strYoutube}" target = "_blank">Watch Video</a>
-            </div>
-        </div>
-
 </div>
 
 
                     
                 `;
-                
-               likebutton.addEventListener('click', addProductToCart(meal));
+
 
 
           });
