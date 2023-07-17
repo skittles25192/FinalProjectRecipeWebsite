@@ -311,19 +311,8 @@ nav a img{
 svg{
     fill:red;
 }
-.meal-item:hover{
-    /*background-color: #b54507;*/
-    /*transform: perspective(500px) rotateY(180deg);*/
-    transition: 1s;
-    transform: perspective(500px) rotateY(180deg);
-    opacity: 0;
-}
 
-.mealcard:hover > .recipe-div{
-    opacity:1;
-    height: 500px;
-    background-color: #304269;
-}
+
 
 
 /* Media Queries */
