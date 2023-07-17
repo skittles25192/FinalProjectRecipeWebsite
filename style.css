@@ -414,7 +414,7 @@ svg, .heart span{
     background-color: #818181;
 }
 #list_container{
-    background-color: aqua;
+    background-color: rgb(204, 255, 0);
 }
 .product-list{
     display: grid;
