@@ -171,6 +171,7 @@ nav a img{
 
 /* meal details */
 .meal-details{
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -188,7 +189,6 @@ nav a img{
     width: 90%;
     height: 90%;
     overflow-y: scroll;
-    display: none;
     padding: 2rem 0;
 }
 .meal-details::-webkit-scrollbar{
