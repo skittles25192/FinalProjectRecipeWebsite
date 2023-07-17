@@ -33,7 +33,7 @@ header{
     margin: 0;
     list-style:none;
     display:grid;
-    grid-template-columns: 1fr 1fr 80px;
+    grid-template-columns: 1fr 80px;
     align-items: center;
   }
 .logo-box img{
