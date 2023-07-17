@@ -166,4 +166,4 @@ function setLocalStorage(key, data) {
 
 loadAsyncFn();
 getMealList();
-shoppingCart();
+ShoppingCart();
