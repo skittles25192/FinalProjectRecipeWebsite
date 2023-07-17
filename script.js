@@ -15,9 +15,15 @@ mealDetailsContent.parentElement.classList.remove('showRecipe');
 
 function updateCartCount() {
     const itemCountElement = document.querySelector('#itemCount');
-    const itemCount = JSON.parse(localStorage.getItem('FavoritesList')).length;
+    const itemCount = "";
+
+    if(JSON.parse(localStorage.getItem('FavoritesList')).length != 0)
+    {
+        itemCount = JSON.parse(localStorage.getItem('FavoritesList')).length;
+
+    }
   
-    if (itemCount) {
+    if (itemCount != "") {
       itemCountElement.textContent = itemCount;
     }
   }
