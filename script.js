@@ -33,6 +33,7 @@ function addProductToCart(product) {
     const updatedCart = [...currentCart, product];
     setLocalStorage('FavoritesList', updatedCart);
     updateCartCount();
+    ShoppingCart();
 
   }
 
