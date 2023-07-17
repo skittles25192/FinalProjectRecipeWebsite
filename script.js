@@ -129,13 +129,12 @@ function ShoppingCart() {
     const newItem =  
 
 `<div class="meal-item" data-id = "${item.idMeal}">
-    <img src = "${item.strMealThumb}" alt = "food"/>
+    <img style="border-radius: 50%; height: 100px; width: 100%" src = "${item.strMealThumb}" alt = "food"/>
     </div>
      
    
     <div class="meal-name">
     <h3>${item.strMeal}</h3>
-    <a href = "#" class = "recipe-btn">Get Recipe</a>
     </div>
     </div>`
 
