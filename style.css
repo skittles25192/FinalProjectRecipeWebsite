@@ -47,7 +47,9 @@ nav a img{
 #FavoritesMenu{
     justify-content: right;
 }
-
+.ico_list{
+    background-color: #304269;
+}
 
 /*  */
 .btn{
