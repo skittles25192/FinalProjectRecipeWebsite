@@ -79,7 +79,6 @@ function getMealList(){
         }
 
         mealList.innerHTML = html;
-        document.getElementById('heart').addEventListener('click', () => addProductToCart(meal));
 
     });
 }
@@ -111,6 +110,8 @@ function mealRecipeModal(meal){
             <a href = "${meal.strYoutube}" target = "_blank">Watch Video</a>
         </div>
     `;
+    document.getElementById('heart').addEventListener('click', () => addProductToCart(meal));
+
     mealDetailsContent.innerHTML = html;
     mealDetailsContent.parentElement.classList.add('showRecipe');
 }
