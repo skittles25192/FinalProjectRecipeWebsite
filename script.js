@@ -21,14 +21,9 @@ function updateCartCount() {
 async function loadAsyncFn() {
     try {
        
-
-        const addToCartBtn = document.querySelector('#heart');
-        if (addToCartBtn) {
-            addToCartBtn.addEventListener('click', () => {
             updateCartCount();
-            });
         }
-    } catch (error) {
+     catch (error) {
         alert('Error loading header and footer or Product Details: ' + error);
     }
 }
@@ -109,6 +104,12 @@ function mealRecipeModal(meal){
     `;
     mealDetailsContent.innerHTML = html;
     mealDetailsContent.parentElement.classList.add('showRecipe');
+    const favoritebutton = document.getElementById('heart');
+    favoritebutton.addEventListener('click', addProductToCart(meal));
+    favoritebutton.addEventListener('click', updateCartCount);
+
+
+
 
 }
 
