@@ -76,7 +76,6 @@ function getMealList(){
         }
 
         mealList.innerHTML = html;
-        document.getElementById('heart').addEventListener('click', () => addProductToCart(meal));
 
     });
 }
@@ -84,8 +83,8 @@ function getMealList(){
 
 // get recipe of the meal
 function getMealRecipe(e){    
-        let mealItem = e;
-        fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealItem.dataset.id}`)
+    let mealItem = e.target.parentElement.parentElement;
+    fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealItem.dataset.id}`)
         .then(response => response.json())
         .then(data => mealRecipeModal(data.meals));
 }
@@ -110,6 +109,8 @@ function mealRecipeModal(meal){
     `;
     mealDetailsContent.innerHTML = html;
     mealDetailsContent.parentElement.classList.add('showRecipe');
+    document.getElementById('heart').addEventListener('click', () => addProductToCart(meal));
+
 }
 
 function getLocalStorage(key) {
