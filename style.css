@@ -419,5 +419,6 @@ svg, .heart span{
 }
 #list_container{
     background-color: rgb(0, 255, 38);
-    align-items: center;
+/*     justify-content: center;
+    align-items: center; */
 }
