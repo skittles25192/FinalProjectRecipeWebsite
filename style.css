@@ -47,7 +47,9 @@ nav a img{
 #FavoritesMenu{
     justify-content: right;
 }
-
+#itemCount{
+    color: white;
+}
 
 /*  */
 .btn{
