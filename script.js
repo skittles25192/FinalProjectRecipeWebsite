@@ -1,19 +1,17 @@
 
 const searchBtn = document.getElementById('search-btn');
 const mealList = document.getElementById('meal');
-const likebutton = document.getElementById('heart');
 const mealDetailsContent = document.querySelector('.meal-details-content');
 const recipeCloseBtn = document.getElementById('recipe-close-btn');
-recipeCloseBtn.addEventListener('click', () => {
-mealDetailsContent.parentElement.classList.remove('showRecipe');
-    
-    
-    });
-mealList.addEventListener('click', getMealRecipe);
-
 
 // event listeners
 searchBtn.addEventListener('click', getMealList);
+mealList.addEventListener('click', getMealRecipe);
+recipeCloseBtn.addEventListener('click', () => {
+mealDetailsContent.parentElement.classList.remove('showRecipe');
+
+    
+});
 
 function updateCartCount() {
     const itemCountElement = document.querySelector('#itemCount');
@@ -26,8 +24,6 @@ function updateCartCount() {
 
 async function loadAsyncFn() {
     try {
-        getLocalStorage('FavoritesList') || [];
-
         updateCartCount();
         const addToCartBtn = document.querySelector('#heart');
         if (addToCartBtn) {
@@ -68,27 +64,22 @@ function getMealList(){
                         </div>
                         <div class = "meal-name">
                             <h3>${meal.strMeal}</h3>
-                       <a href = "#" class = "recipe-btn">Get Recipe</a>
+                            <a href = "#" class = "recipe-btn">Get Recipe</a>
                         </div>
                  </div>
 
 </div>
-
-
                     
                 `;
-
-
-
-          });
+            });
             mealList.classList.remove('notFound');
         } else{
             html = "Sorry, we didn't find any meal!";
             mealList.classList.add('notFound');
         }
 
-
         mealList.innerHTML = html;
+        document.getElementById('heart').addEventListener('click', () => addProductToCart(meal));
 
     });
 }
@@ -97,7 +88,7 @@ function getMealList(){
 // get recipe of the meal
 function getMealRecipe(e){    
         let mealItem = e;
-        fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealItem.idMeal}`)
+        fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealItem.dataset.id}`)
         .then(response => response.json())
         .then(data => mealRecipeModal(data.meals));
 }
@@ -124,7 +115,6 @@ function mealRecipeModal(meal){
     mealDetailsContent.parentElement.classList.add('showRecipe');
 }
 
-
 function getLocalStorage(key) {
     return JSON.parse(localStorage.getItem(key));
   }
@@ -135,4 +125,3 @@ function setLocalStorage(key, data) {
 
 loadAsyncFn();
 getMealList();
-
