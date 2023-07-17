@@ -129,7 +129,7 @@ function ShoppingCart() {
   function cartItemTemplate(item) {
     const newItem =  
 
-`<div id="list_container"
+`<div id="list_container">
 <div class="meal-item" data-id = "${item.idMeal}">
     <img style="border-radius: 50%; height: 100px; width: 100px" src = "${item.strMealThumb}" alt = "food"/>
     </div>
