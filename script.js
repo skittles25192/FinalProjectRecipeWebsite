@@ -112,7 +112,6 @@ function mealRecipeModal(meal){
     `;
     mealDetailsContent.innerHTML = html;
     mealDetailsContent.parentElement.classList.add('showRecipe');
-    document.getElementById('heart').addEventListener('click', () => addProductToCart(meal));
 
 }
 
