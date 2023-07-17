@@ -415,9 +415,9 @@ svg, .heart span{
 }
 #list_container{
     background-color: aqua;
+    justify-content: center;
 }
 .product-list{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    
 }
