@@ -130,7 +130,7 @@ function ShoppingCart() {
     const newItem =  
 
 `<div class="meal-item" data-id = "${item.idMeal}">
-    <img style="border-radius: 50%; height: 100px; width: 100%" src = "${item.strMealThumb}" alt = "food"/>
+    <img style="border-radius: 50%; height: 100px; width: 100px" src = "${item.strMealThumb}" alt = "food"/>
     </div>
      
    
