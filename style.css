@@ -320,19 +320,17 @@ svg, .heart span{
 .heart button{border-radius: 50px;
     width: 60px;  
 }
-.meal-item:hover{
-    /*background-color: #b54507;*/
-    /*transform: perspective(500px) rotateY(180deg);*/
-   /* transition: 1s;
+.mealhoverevent{
     transform: perspective(500px) rotateY(180deg);
-    opacity: 0;*/
+    transition: 1s;
+    transform: perspective(500px) rotateY(180deg);
 }
 
-.mealcard:hover > .recipe-div{
+/*.mealcard:hover > .recipe-div{
     opacity:1;
     height: 500px;
     background-color: #304269;
-}
+}*/
 
 .recipe-div{
     background-color: aqua;

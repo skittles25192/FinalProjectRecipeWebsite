@@ -26,7 +26,7 @@ function updateCartCount() {
 
 async function loadAsyncFn() {
     try {
-        const currentCart = getLocalStorage('FavoritesList') || [];
+        getLocalStorage('FavoritesList') || [];
 
         updateCartCount();
         const addToCartBtn = document.querySelector('#heart');
