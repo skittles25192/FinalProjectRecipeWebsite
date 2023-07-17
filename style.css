@@ -6,45 +6,15 @@
     box-sizing: border-box;
 }
 :root{
-    --tenne-tawny: #304269;
+    --tenne-tawny: #d65108;
     --tenne-tawny-dark: #b54507;
-    --font-web: 'Poppins', sans-serif;
 }
 body{
     font-weight: 300;
     font-size: 1.05rem;
     line-height: 1.6;
-    font-family: var(--font-web);
+    font-family: 'Poppins', sans-serif;
 }
- nav a{
-    color:#000000;
-    font-size:1.1em;
-    text-decoration:none;
-  }
-header{
-    font-family: var(--font-web);
-    display:grid;
-    grid-template-columns:20% auto;
-    align-items:center;
-    background-color: #E05C0D;
-    
-  }
-  nav ul{
-    margin: 0;
-    list-style:none;
-    display:grid;
-    grid-template-columns: 1fr 1fr 80px;
-    align-items: center;
-  }
-.logo-box img{
-    width: 160px;
-    height: 160px;
-}
-nav a img{
-    width: 40px;
-    height: 40px;
-}
-
 
 /*  */
 .btn{
@@ -304,13 +274,7 @@ nav a img{
     width: 100%;
 }
 
-/* .heart{
-    float: left; 
-    position: fixed;
-} */
-svg{
-    fill:red;
-}
+
 
 
 
