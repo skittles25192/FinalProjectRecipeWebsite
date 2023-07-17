@@ -15,24 +15,17 @@ mealDetailsContent.parentElement.classList.remove('showRecipe');
 
 function updateCartCount() {
     const itemCountElement = document.querySelector('#itemCount');
-    const itemCount = "";
-
-    if(JSON.parse(localStorage.getItem('FavoritesList')).length != 0)
-    {
-        itemCount = JSON.parse(localStorage.getItem('FavoritesList')).length;
-
-    }
+    const itemCount = JSON.parse(localStorage.getItem('FavoritesList')).length;
   
-    if (itemCount != "") {
+    if (itemCount) {
       itemCountElement.textContent = itemCount;
     }
   }
 
 async function loadAsyncFn() {
     try {
-        const currentCart = getLocalStorage('FavoritesList') || [];
+       
 
-        updateCartCount();
         const addToCartBtn = document.querySelector('#heart');
         if (addToCartBtn) {
             addToCartBtn.addEventListener('click', () => {
@@ -47,8 +40,6 @@ async function loadAsyncFn() {
 function addProductToCart(product) {
     const currentCart = getLocalStorage('FavoritesList') || [];
     const updatedCart = [...currentCart, product];
-    updateCartCount();
-
     setLocalStorage('FavoritesList', updatedCart);
   }
 
@@ -65,13 +56,19 @@ function getMealList(){
                 html += `
 
 
-<div class = "meal-img">
-<img src = "food.jpg" alt = "food">
-</div>
-<div class = "meal-name">
-<h3>Potato Chips</h3>
-<a href = "#" class = "recipe-btn">Get Recipe</a>
-</div>`;});
+                <div class = "meal-item" data-id = "${meal.idMeal}">
+                        <div id="flip" class = "meal-img">
+                            <img  src = "${meal.strMealThumb}" alt = "food">
+                        </div>
+                        <div class = "meal-name">
+                            <h3>${meal.strMeal}</h3>
+                            <a href = "#" class = "recipe-btn">Get Recipe</a>
+                        </div>
+                 </div>
+
+                    
+                `;
+            });
             mealList.classList.remove('notFound');
         } else{
             html = "Sorry, we didn't find any meal!";
@@ -79,6 +76,7 @@ function getMealList(){
         }
 
         mealList.innerHTML = html;
+        document.getElementById('heart').addEventListener('click', () => addProductToCart(meal));
 
     });
 }
