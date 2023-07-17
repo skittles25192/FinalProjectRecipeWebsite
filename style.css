@@ -417,6 +417,8 @@ svg, .heart span{
     background-color: aqua;
     justify-content: center;
     align-items: center;
+    align-content: center;
+    
 }
 .product-list{
     display: grid;
