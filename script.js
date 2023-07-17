@@ -90,6 +90,7 @@ function getMealRecipe(e){
         .then(response => response.json())
         .then(data => mealRecipeModal(data.meals));
 }
+}
 
 // create a modal
 function mealRecipeModal(meal){
