@@ -47,6 +47,9 @@ nav a img{
 #FavoritesMenu{
     justify-content: right;
 }
+.ico_list{
+    background-color: #304269;
+}
 #itemCount{
     color: white;
     background-color: #304269;
