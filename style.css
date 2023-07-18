@@ -319,6 +319,8 @@ nav a img{
 } */
 svg, .heart span{
     margin: 5px;
+    fill:  red;
+    background-color: #E05C0D;
      
 }
 .heart button{border-radius: 50px;
