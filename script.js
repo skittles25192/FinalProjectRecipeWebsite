@@ -110,8 +110,8 @@ function getMealListAll(){
     });
 }
 
-function getMealListEnter(){
-    if(key === 'Enter') {
+function getMealListEnter(e){
+    if( e.keyCode == 13 ) {
 
         let searchInputTxt = document.getElementById('search-input').value.trim();
         fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${searchInputTxt}`)
