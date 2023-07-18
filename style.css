@@ -219,7 +219,6 @@ nav a img{
 
 .meal-details-content{
     margin: 2rem;
-    background-color: rgb(156, 252, 0);
 }
 .meal-details-content p:not(.recipe-category){
     padding: 1rem 0;
@@ -246,7 +245,6 @@ nav a img{
 .recipe-title{
     letter-spacing: 1px;
     padding-bottom: 1rem;
-    background-color: #b54507;
 }
 .recipe-category{
     background: #fff;
@@ -275,7 +273,6 @@ nav a img{
 }
 .recipe-instruct{
     padding: 1rem 0;
-    background-color: #d00d0d;
 }
 .recipe-meal-img img{
     width: 150px;
