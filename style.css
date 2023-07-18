@@ -364,10 +364,14 @@ nav a img{
     float: left; 
     position: fixed;
 } */
-svg, .heart span{
-    margin: 5px;
+svg, #heart{
+    
     fill:  red;
      
+}
+#heart:hover{
+    background-color: #77ff00;
+    width: 90px;
 }
 .heart button{border-radius: 50px;
     width: 60px;  
