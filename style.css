@@ -47,17 +47,14 @@ nav a img{
 #FavoritesMenu{
     justify-content: right;
 }
-.ico_list{
-    background-color: #304269;
-    float: left;
-}
+
 #itemCount{
     color: white;
     background-color: #303f69;
 /*     width: 25px;
     height: 25px; */
     border-radius: 50%;
-    padding: 5px;
+    /* padding: 5px; */
     float: left;
     
 }
