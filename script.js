@@ -80,6 +80,41 @@ function getMealList(){
     });
 }
 
+function getMealListAll(){
+    fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?i=`)
+    .then(response => response.json())
+    .then(data => {
+        let html = "";
+        if(data.meals){
+            data.meals.forEach(meal => {
+
+                html += `
+
+
+                <div class = "meal-item" data-id = "${meal.idMeal}">
+                        <div id="flip" class = "meal-img">
+                            <img  src = "${meal.strMealThumb}" alt = "food">
+                        </div>
+                        <div class = "meal-name">
+                            <h3>${meal.strMeal}</h3>
+                            <a href = "#" class = "recipe-btn">Get Recipe</a>
+                        </div>
+                 </div>
+
+                    
+                `;
+            });
+            mealList.classList.remove('notFound');
+        } else{
+            html = "Sorry, we didn't find any meal!";
+            mealList.classList.add('notFound');
+        }
+
+        mealList.innerHTML = html;
+
+    });
+}
+
 
 // get recipe of the meal
 function getMealRecipe(e){    
@@ -173,6 +208,6 @@ function setLocalStorage(key, data) {
   }
 
 loadAsyncFn();
-getMealList();
+getMealListAll();
 ShoppingCart();
 
