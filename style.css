@@ -420,9 +420,11 @@ svg, .heart span{
     display: grid;
     grid-template-columns: 1fr;
 }
+
 #list_container span{
-    background-color: chocolate;
+    background-color: rgb(255, 242, 0);
     margin: 40px;
     margin-bottom: 60px;
+    padding-bottom: 25px;
 }
 
