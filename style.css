@@ -418,7 +418,7 @@ svg, .heart span{
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
-    color: #818181;
+    color: #fff;
     display: block;
     transition: 0.3s;
   }
@@ -460,7 +460,7 @@ select {
     height: 3em;
     padding: 0 4em 0 1em;
     
-    color: white;
+    color: #304269;
     border-radius: 0.25em;
     box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
     cursor: pointer;
