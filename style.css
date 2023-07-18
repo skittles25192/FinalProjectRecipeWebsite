@@ -48,6 +48,7 @@ nav a img{
     justify-content: right;
 }
 .ico_list{
+    position: absolute;
     float: left;
     z-index: 1;
     background-color: aqua;
@@ -57,6 +58,7 @@ nav a img{
     float: left;
 }
 #itemCount{
+    position: fixed;
     color: white;
     background-color: #32c914;
     width: 25px;
