@@ -164,6 +164,12 @@ function getMealRecipe(e){
         .then(response => response.json())
         .then(data => mealRecipeModal(data.meals));
 }
+if(e.target.classList.contains('recipe-btn-favorite')){
+    let mealItem = e.target.parentElement;
+fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealItem.dataset.id}`)
+    .then(response => response.json())
+    .then(data => mealRecipeModal(data.meals));
+}
 }
 
 // create a modal
@@ -213,7 +219,7 @@ function ShoppingCart() {
 <div class="meal-item" data-id = "${item.idMeal}">
     <img style="border-radius: 50%; height: 100px; width: 100px" src = "${item.strMealThumb}" alt = "food"/>
     <h4>${item.strMeal}</h4>
-    <a href = "#" class = "recipe-btn">Get Recipe</a>
+    <a href = "#" class = "recipe-btn-favorite">Get Recipe</a>
 
     </div>
     
