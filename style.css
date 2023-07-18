@@ -449,3 +449,24 @@ svg, .heart span{
 .meal-item h4{
     color:white;
 }
+
+select {
+    /* Reset */
+    appearance: none;
+    border: 0;
+    outline: 0;
+    font: inherit;
+    /* Personalize */
+    height: 3em;
+    padding: 0 4em 0 1em;
+    
+    color: white;
+    border-radius: 0.25em;
+    box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    /* <option> colors */
+    option {
+      color: inherit;
+    }
+   
+}
