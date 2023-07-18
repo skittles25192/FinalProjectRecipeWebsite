@@ -422,7 +422,7 @@ svg, .heart span{
 }
 .meal-name{
     background-color: #e50e0e;
-    grid-column: 1/2;
+    grid-column: 2/3;
 }
 #list_container{
     background-color: rgb(74, 255, 13);
