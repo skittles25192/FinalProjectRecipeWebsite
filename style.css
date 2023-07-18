@@ -216,7 +216,7 @@ nav a img{
     display: block;
 
 }
-
+/*card meal recipe*/
 .meal-details-content{
     margin: 2rem;
 }
@@ -413,7 +413,7 @@ svg, .heart span{
     font-size: 36px;
     margin-left: 50px;
   }
-
+/*align items in favorite list */
 .product-list{
     display: grid;
     grid-template-columns: 1fr;
@@ -422,4 +422,7 @@ svg, .heart span{
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+.meal-item h4{
+    color:white;
 }
