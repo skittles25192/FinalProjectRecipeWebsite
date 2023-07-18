@@ -55,21 +55,7 @@ nav a img{
 .ico_list a img {
     z-index: 1;
 }
-#itemCount{
-        /* position: fixed; */
-    color: white;
-    background-color: #9d9abc;
-    width: 25px;
-    height: 25px; 
-    border-radius: 50%;
-    align-content: center;
-    text-align: center;
-    /* padding: 5px; */
-    float: right;
-    z-index: 2;
-    position: absolute;
- 
-}
+
 
 /*  */
 .btn{
