@@ -29,7 +29,6 @@ async function loadAsyncFn() {
             updateCartCount();
         }
      catch (error) {
-        alert('Error loading header and footer or Product Details: ' + error);
     }
 }
 
