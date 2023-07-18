@@ -420,6 +420,8 @@ svg, .heart span{
 }
 .meal-item{
     background-color: darkgreen;
+    justify-content: center;
+    
 }
 #list_container h4{
     background-color: rgb(255, 242, 0);
