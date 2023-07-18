@@ -422,7 +422,6 @@ svg, .heart span{
 }
 #list_container{
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 #list_container span{
