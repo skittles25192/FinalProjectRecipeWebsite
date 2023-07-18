@@ -50,6 +50,7 @@ nav a img{
 .ico_list{
     float: left;
     z-index: 1;
+    background-color: aqua;
 }
 
 #itemCount{
