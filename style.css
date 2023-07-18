@@ -422,11 +422,12 @@ svg, .heart span{
 }
 #list_container{
     align-items: center;
-    text-align: center;
+
 }
 #list_container span{
-    background-color: rgb(204, 255, 0);
+    background-color: rgb(6, 174, 171);
     margin: 40px;
     margin-bottom: 60px;
+    padding-bottom: 25px;
 }
 
