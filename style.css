@@ -421,7 +421,7 @@ svg, .heart span{
     grid-template-columns: 1fr 1fr;
 }
 #list_container{
-    background-color: aqua;
+    background-color: rgb(150, 255, 4);
     grid-template-rows: 1fr 1fr;
 }
 
