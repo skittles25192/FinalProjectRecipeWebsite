@@ -1,6 +1,8 @@
 const searchBtn = document.getElementById('search-btn');
 const mealList = document.getElementById('meal');
-const favoriteList = document.getElementById('product-list');
+const favoriteList = document.querySelector('.meal-item');
+const remove = document.querySelector('.remove');
+
 
 const mealDetailsContent = document.querySelector('.meal-details-content');
 const recipeCloseBtn = document.getElementById('recipe-close-btn');
@@ -10,6 +12,8 @@ const inpu = document.getElementById("search-control");
 searchBtn.addEventListener('click', getMealList);
 mealList.addEventListener('click', getMealRecipe);
 favoriteList.addEventListener('click', getMealRecipe);
+remove.addEventListener('click', removeFromFavorites());
+
 
 recipeCloseBtn.addEventListener('click', () => {
     mealDetailsContent.parentElement.classList.remove('showRecipe');
@@ -23,6 +27,8 @@ function updateCartCount() {
     }
   }
 
+
+
 async function loadAsyncFn() {
     try {
        
@@ -33,9 +39,22 @@ async function loadAsyncFn() {
     }
 }
 
-function addProductToCart(product) {
+function addProductToCart() {
     const currentCart = getLocalStorage('FavoritesList') || [];
     const updatedCart = [...currentCart, product];
+    setLocalStorage('FavoritesList', updatedCart);
+    updateCartCount();
+    ShoppingCart();
+
+  }
+
+  function removeFromFavorites(e) {
+    const cartItems = getLocalStorage('FavoritesList');
+    const updatedCart = [...currentCart, e];
+
+
+
+
     setLocalStorage('FavoritesList', updatedCart);
     updateCartCount();
     ShoppingCart();
@@ -222,7 +241,9 @@ function ShoppingCart() {
     <a href = "#" class = "recipe-btn-favorite">Get Recipe</a>
 
     </div>
-    
+    <div class="remove">
+    <a href = "#" class = "recipe-btn-remove">Remove</a>
+</div>
     </div>`
 
    
