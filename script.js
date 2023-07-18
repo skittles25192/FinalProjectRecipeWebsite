@@ -197,7 +197,7 @@ function mealRecipeModal(meal){
 
 function ShoppingCart() {
     const cartItems = getLocalStorage('FavoritesList');
-    const cartElement = document.querySelector('.product-list');  
+    const cartElement = document.querySelector('#product-list');  
     renderListWithTemplate(cartItemTemplate, cartElement, cartItems);
     //functionality to add total
     const itemCount = cartItems ? cartItems.length : 0;
