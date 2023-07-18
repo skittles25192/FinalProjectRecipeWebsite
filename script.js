@@ -69,23 +69,11 @@ function getMealList(){
                         </div>
                  </div>
 
-</div>
+        <div class = "recipe-div" style="height:500px;">
+          <a id="heart" href="#"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M6.28 3c3.236.001 4.973 3.491 5.72 5.031.75-1.547 2.469-5.021 5.726-5.021 2.058 0 4.274 1.309 4.274 4.182 0 3.442-4.744 7.851-10 13-5.258-5.151-10-9.559-10-13 0-2.676 1.965-4.193 4.28-4.192zm.001-2c-3.183 0-6.281 2.187-6.281 6.192 0 4.661 5.57 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-4.011-3.097-6.182-6.274-6.182-2.204 0-4.446 1.042-5.726 3.238-1.285-2.206-3.522-3.248-5.719-3.248z"/></svg></a>
+            <h2 class = "recipe-title">${meal.strMeal}</h2>
+            <p class = "recipe-category">${meal.strCategory}</p>
 
-<div class = "recipe-div" style="height:500px;">
-            <div id="heart">
-                    <button id="like"><?xml version="1.0" encoding="UTF-8"?>
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="45px" height="45px" viewBox="0 0 45 45" version="1.1">
-                    <g id="surface1">
-                    <path style="background-color: #b54507; stroke:none;fill-rule:nonzero;fill:rgb(255, 0, 0);fill-opacity:1;" d="M 11.773438 5.625 C 17.84375 5.625 21.097656 12.171875 22.5 15.058594 C 23.90625 12.15625 27.128906 5.644531 33.234375 5.644531 C 37.09375 5.644531 41.25 8.097656 41.25 13.484375 C 41.25 19.9375 32.355469 28.207031 22.5 37.859375 C 12.640625 28.203125 3.75 19.9375 3.75 13.484375 C 3.75 8.46875 7.433594 5.625 11.773438 5.625 Z M 11.777344 1.875 C 5.808594 1.875 0 5.976562 0 13.484375 C 0 22.222656 10.445312 31.160156 22.5 43.125 C 34.554688 31.160156 45 22.222656 45 13.484375 C 45 5.964844 39.191406 1.894531 33.234375 1.894531 C 29.105469 1.894531 24.898438 3.847656 22.5 7.964844 C 20.089844 3.828125 15.894531 1.875 11.777344 1.875 Z M 11.777344 1.875 "/>
-                    </g>
-                    </svg> 
-                    <span id="like_text"></span>
-            </button>
-
-
-                    </div>
-                    <div class="div_tittle"><h2 class = "recipe-title">${meal.strMeal}</h2>
-            <p class = "recipe-category">${meal.strCategory}</p></div>
         
             <div class = "recipe-instruct">
                 <h3>Instructions:</h3>
@@ -98,6 +86,10 @@ function getMealList(){
                 <a href = "${meal.strYoutube}" target = "_blank">Watch Video</a>
             </div>
         </div>
+
+</div>
+
+
                     
                 `;
           });
@@ -106,6 +98,8 @@ function getMealList(){
             html = "Sorry, we didn't find any meal!";
             mealList.classList.add('notFound');
         }
+
+        getMealRecipe(this);
 
         mealList.innerHTML = html;
 
@@ -144,4 +138,15 @@ function mealRecipeModal(meal){
 }
 
 getMealList()
+
+function getLocalStorage(key) {
+    return JSON.parse(localStorage.getItem(key));
+  }
+  // save data to local storage
+function setLocalStorage(key, data) {
+    localStorage.setItem(key, JSON.stringify(data));
+  }
+
+loadAsyncFn();
+getMealList();
 
