@@ -420,8 +420,8 @@ svg, .heart span{
     display: grid;
     grid-template-columns: 1fr;
 }
-.meal-intem span{
+#list_container span{
     background-color: chocolate;
-    padding: 15px;
+    padding: px;
 }
 
