@@ -319,6 +319,7 @@ nav a img{
 } */
 svg, .heart span{
     margin: 5px;
+    fill:  red;
      
 }
 .heart button{border-radius: 50px;
