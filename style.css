@@ -51,10 +51,10 @@ nav a img{
     float: left;
     z-index: 1;
     background-color: aqua;
+    position: relative;
 }
 .ico_list a img {
     z-index: 1;
-    float: left;
 }
 #itemCount{
     /* position: fixed; */
