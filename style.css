@@ -197,6 +197,8 @@ nav a img{
     overflow-y: scroll;
     display: none;
     padding: 2rem 0;
+    z-index: 10;
+
 }
 .meal-details::-webkit-scrollbar{
     width: 10px;
@@ -367,6 +369,7 @@ svg, .heart span{
     }
     .meal-details{
         width: 700px;
+
     }
 }
 
