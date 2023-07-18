@@ -52,7 +52,10 @@ nav a img{
     z-index: 1;
     background-color: aqua;
 }
-
+.ico_list a {
+    z-index: 1;
+    float: left;
+}
 #itemCount{
     color: white;
     background-color: #32c914;
