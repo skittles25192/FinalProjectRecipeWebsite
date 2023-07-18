@@ -452,7 +452,6 @@ svg, .heart span{
 
 select {
     /* Reset */
-    appearance: none;
     border: 0;
     outline: 0;
     font: inherit;
