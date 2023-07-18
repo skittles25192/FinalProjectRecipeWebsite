@@ -420,6 +420,11 @@ svg, .heart span{
     display: grid;
     grid-template-columns: 1fr;
 }
+#list_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 #list_container span{
     background-color: chocolate;
     margin: 40px;
