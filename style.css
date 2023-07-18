@@ -460,7 +460,7 @@ select {
     padding: 0 4em 0 1em;
     
     color: #304269;
-    border-radius: 0.25em;
+    border-radius: 1.5em;
     box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
     cursor: pointer;
     /* <option> colors */
