@@ -420,6 +420,8 @@ svg, .heart span{
     display: grid;
     grid-template-columns: 1fr;
     align-items: center;
+    align-content: center;
+    text-align: center;
 }
 
 
