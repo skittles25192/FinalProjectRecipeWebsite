@@ -169,3 +169,10 @@ function setLocalStorage(key, data) {
 loadAsyncFn();
 getMealList();
 ShoppingCart();
+
+searchBtn.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    document.getElementById("search-btn").click();
+  }
+});
