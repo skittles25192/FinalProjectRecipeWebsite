@@ -74,6 +74,8 @@ function sortFunction(value)
         }
 
         mealList.innerHTML = html;
+        var area = document.getElementById('sortArea');
+        area.selectedIndex = 1;
 
     });
 }
@@ -113,6 +115,8 @@ function getMealListArea(Area){
         }
 
         mealList.innerHTML = html;
+        var category = document.getElementById('sortCatefory');
+        category.selectedIndex = 1;
 
     });
 }
@@ -160,7 +164,7 @@ function getMealListArea(Area){
             <i class = "fas fa-search"></i>
           </button>
         </div>
-        <select name="sort" id="sort" onchange="sortFunction(this.value)">
+        <select name="sortCategory" id="sortCategory" onchange="sortFunction(this.value)">
   <option value="" disabled selected>Select a Category</option>
   <option value="All">All</option>
   <option value="Breakfast">Breakfast</option>
@@ -170,7 +174,7 @@ function getMealListArea(Area){
 
 </select>
 
-<select name="sort" id="sort" onchange="sortFunction(this.value)">
+<select name="sortArea" id="sortArea" onchange="sortFunction(this.value)">
   <option value="" disabled selected>Select a Food Location</option>
   <option value="All">All</option>
   <option value="American">American</option>
