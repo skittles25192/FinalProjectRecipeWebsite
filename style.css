@@ -419,9 +419,9 @@ svg, .heart span{
 .product-list{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
 }
 #list_container{
-    background-color: rgb(255, 4, 4);
-    grid-template-rows: 1fr 1fr;
+    background-color: rgb(157, 255, 0);
 }
 
