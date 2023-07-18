@@ -43,6 +43,18 @@ header{
     width: 160px;
     height: 160px;
 }
+.logo-box:hover{
+    background-color: #77ff00;
+    animation: texty .2s ease-in;
+}
+/* @keyframes texty {
+    0%{transform: rotateY(180deg);
+        transition: 0.1s;
+    }
+    100%{
+        transform: rotateY(0deg);
+    }
+} */
 .logo-box img,   nav ul{
     animation: moving 1s ease-in-out;
 }
