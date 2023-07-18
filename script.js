@@ -209,7 +209,8 @@ function ShoppingCart() {
 <div class="meal-item" data-id = "${item.idMeal}">
     <img style="border-radius: 50%; height: 100px; width: 100px" src = "${item.strMealThumb}" alt = "food"/>
     <h4>${item.strMeal}</h4>
-    
+    <a href = "#" class = "recipe-btn">Get Recipe</a>
+
     </div>
     
     </div>`
