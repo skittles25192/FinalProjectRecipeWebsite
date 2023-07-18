@@ -50,7 +50,6 @@ nav a img{
 .ico_list{
     float: left;
     z-index: 1;
-    background-color: aqua;
     position: relative;
 }
 .ico_list a img {
@@ -59,6 +58,7 @@ nav a img{
 #itemCount{
     /* position: fixed; */
     color: white;
+    background-color: #2314c9;
     width: 25px;
     height: 25px; 
     border-radius: 50%;
