@@ -1,5 +1,7 @@
 const searchBtn = document.getElementById('search-btn');
 const mealList = document.getElementById('meal');
+const favoriteList = document.getElementById('product-list');
+
 const mealDetailsContent = document.querySelector('.meal-details-content');
 const recipeCloseBtn = document.getElementById('recipe-close-btn');
 const inpu = document.getElementById("search-control");
@@ -7,6 +9,8 @@ const inpu = document.getElementById("search-control");
 // event listeners
 searchBtn.addEventListener('click', getMealList);
 mealList.addEventListener('click', getMealRecipe);
+favoriteList.addEventListener('click', getMealRecipe);
+
 recipeCloseBtn.addEventListener('click', () => {
     mealDetailsContent.parentElement.classList.remove('showRecipe');
 });
