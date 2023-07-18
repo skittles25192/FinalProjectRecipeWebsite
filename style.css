@@ -57,7 +57,7 @@ nav a img{
     float: left;
 }
 #itemCount{
-    position: fixed;
+    /* position: fixed; */
     color: white;
     background-color: #32c914;
     width: 25px;
