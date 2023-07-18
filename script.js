@@ -208,13 +208,10 @@ function ShoppingCart() {
 `<div id="list_container">
 <div class="meal-item" data-id = "${item.idMeal}">
     <img style="border-radius: 50%; height: 100px; width: 100px" src = "${item.strMealThumb}" alt = "food"/>
-    </div>
-     
-   
-    <div class="meal-name">
-    <h3>${item.strMeal}</h3>
-    </div>
-    </div>
+
+    
+    </div><span>${item.strMeal}</span>
+    
     </div>`
 
    
