@@ -421,7 +421,6 @@ svg, .heart span{
     grid-template-columns: 1fr;
 }
 #list_container{
-    display: flex;
     align-items: center;
 }
 #list_container span{
