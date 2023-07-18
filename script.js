@@ -6,6 +6,12 @@ const recipeCloseBtn = document.getElementById('recipe-close-btn');
 // event listeners
 searchBtn.addEventListener('click', getMealList);
 mealList.addEventListener('click', getMealRecipe);
+searchBtn.addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      document.getElementById("search-btn").click();
+    }
+  });
 recipeCloseBtn.addEventListener('click', () => {
     mealDetailsContent.parentElement.classList.remove('showRecipe');
 });
@@ -170,9 +176,3 @@ loadAsyncFn();
 getMealList();
 ShoppingCart();
 
-searchBtn.addEventListener("keypress", function(event) {
-  if (event.key === "Enter") {
-    event.preventDefault();
-    document.getElementById("search-btn").click();
-  }
-});
