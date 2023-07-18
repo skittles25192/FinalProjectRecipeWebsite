@@ -420,12 +420,4 @@ svg, .heart span{
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
-.meal-name{
-    background-color: #ec1010;
-    grid-column: 2/3;
-}
-#list_container{
-    background-color: rgb(84, 239, 33);
-    grid-row: 1/2
-    
-}
+
