@@ -423,5 +423,6 @@ svg, .heart span{
 #list_container span{
     background-color: chocolate;
     margin: 40px;
+    margin-bottom: 60px;
 }
 
