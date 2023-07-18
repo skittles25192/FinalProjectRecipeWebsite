@@ -28,6 +28,19 @@ function sortFunction(value)
     
         }
 
+        if(value == "American"){
+          getMealListArea("American");
+    
+        }
+
+        if(value == "Japanese"){
+          getMealListArea("Japanese");
+    
+        }
+        if(value == "Canadian"){
+          getMealListArea("Canadian");
+    
+        }
 
         function getMealList(Category){
     let searchInputTxt = document.getElementById('search-input').value.trim();
@@ -68,6 +81,44 @@ function sortFunction(value)
 
 }
 
+function getMealListArea(Area){
+    let searchInputTxt = document.getElementById('search-input').value.trim();
+    fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?a=${Area}`)
+    .then(response => response.json())
+    .then(data => {
+        let html = "";
+        if(data.meals){
+            data.meals.forEach(meal => {
+
+                html += `
+
+
+                <div class = "meal-item" data-id = "${meal.idMeal}">
+                        <div id="flip" class = "meal-img">
+                            <img  src = "${meal.strMealThumb}" alt = "food">
+                        </div>
+                        <div class = "meal-name">
+                            <h3>${meal.strMeal}</h3>
+                            <a href = "#" class = "recipe-btn">Get Recipe</a>
+                        </div>
+                 </div>
+
+                    
+                `;
+            });
+            mealList.classList.remove('notFound');
+        } else{
+            html = "Sorry, we didn't find any meal!";
+            mealList.classList.add('notFound');
+        }
+
+        mealList.innerHTML = html;
+
+    });
+}
+
+
+}
 
 
     </script>
@@ -110,18 +161,28 @@ function sortFunction(value)
           </button>
         </div>
         <select name="sort" id="sort" onchange="sortFunction(this.value)">
-  <option value="" disabled selected>Sort By</option>
-  <option value="Default">All</option>
+  <option value="" disabled selected>Select a Category</option>
+  <option value="All">All</option>
   <option value="Breakfast">Breakfast</option>
   <option value="Dessert">Dessert</option>
   <option value="Vegetarian">Vegetarian</option>
 
 
 </select>
+
+<select name="sort" id="sort" onchange="sortFunction(this.value)">
+  <option value="" disabled selected>Select a Food Location</option>
+  <option value="All">All</option>
+  <option value="American">American</option>
+  <option value="Japanese">Japanese</option>
+  <option value="Canadian">Canadian</option>
+
+
+</select>
       </div>
 
       <div class = "meal-result">
-        <h2 class = "title">Your Search Results:</h2>
+        <h2 class = "title">Your Results:</h2>
         <div id= "meal">
           <!-- meal item -->
           <!-- <div class = "meal-item">
