@@ -419,11 +419,12 @@ svg, .heart span{
 .product-list{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 60px auto 1fr;
 }
 .meal-name{
     background-color: #818181;
+    grid-column: 1/2;
 }
 #list_container{
     background-color: rgb(25, 0, 255);
+    
 }
