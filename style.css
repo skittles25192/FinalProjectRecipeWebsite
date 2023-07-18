@@ -59,7 +59,6 @@ nav a img{
 #itemCount{
     /* position: fixed; */
     color: white;
-    background-color: #32c914;
     width: 25px;
     height: 25px; 
     border-radius: 50%;
@@ -69,7 +68,6 @@ nav a img{
     float: right;
     z-index: 2;
     position: absolute;
-    left: 0;
     
 }
 
