@@ -27,7 +27,7 @@ header{
     grid-template-columns:20% auto;
     align-items:center;
     background-color: #E05C0D;
-    animation: anima 1s infinite;
+    
     
   }
   nav ul{
@@ -36,7 +36,6 @@ header{
     display:grid;
     grid-template-columns: 1fr 1fr 80px;
     align-items: center;
-    animation: anima 1s infinite;
   }
 .logo-box img{
     width: 160px;
