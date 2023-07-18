@@ -34,25 +34,39 @@ header{
     margin: 0;
     list-style:none;
     display:grid;
-    grid-template-columns: 1fr 1fr 80px;
+    grid-template-columns: 1fr 80px;
     align-items: center;
+
+    
   }
 .logo-box img{
     width: 160px;
     height: 160px;
-    
 }
-@keyframes anima{
-    0%{
-        transform: skew(53ged) translate(-900px);
+.logo-box img,   nav ul{
+    animation: moving 1s ease-in-out;
+}
+@keyframes moving {
+    0%{transform: skewX(25deg) translateX(-500px);
     }
     100%{
-        transform: skew(0deg);
+        transform: skewX(0deg);
     }
 }
 nav a img{
     width: 40px;
     height: 40px;
+}
+#FavoritesMenu{
+    justify-content: right;
+}
+.ico_list{
+    float: left;
+    z-index: 1;
+    position: relative;
+}
+.ico_list a img {
+    z-index: 1;
 }
 
 
@@ -201,6 +215,8 @@ nav a img{
     overflow-y: scroll;
     display: none;
     padding: 2rem 0;
+    z-index: 10;
+
 }
 .meal-details::-webkit-scrollbar{
     width: 10px;
@@ -220,10 +236,9 @@ nav a img{
     display: block;
 
 }
-
+/*card meal recipe*/
 .meal-details-content{
     margin: 2rem;
-    background-color: rgb(156, 252, 0);
 }
 .meal-details-content p:not(.recipe-category){
     padding: 1rem 0;
@@ -250,7 +265,6 @@ nav a img{
 .recipe-title{
     letter-spacing: 1px;
     padding-bottom: 1rem;
-    background-color: #b54507;
 }
 .recipe-category{
     background: #fff;
@@ -279,7 +293,6 @@ nav a img{
 }
 .recipe-instruct{
     padding: 1rem 0;
-    background-color: #d00d0d;
 }
 .recipe-meal-img img{
     width: 150px;
@@ -311,6 +324,21 @@ nav a img{
 }
 
 
+#superscript {
+    background-color: #304269;
+    color: white;
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 50%;
+    
+    padding: 6px 10px;
+    z-index: 2;
+    position: absolute;
+    top: -10px;
+    left: 20px;
+  }
+
 /*  */
 .notFound{
     grid-template-columns: 1fr!important;
@@ -326,27 +354,15 @@ nav a img{
 } */
 svg, .heart span{
     margin: 5px;
+    fill:  red;
      
 }
 .heart button{border-radius: 50px;
     width: 60px;  
 }
-.meal-item:hover{
-    /*background-color: #b54507;*/
-    /*transform: perspective(500px) rotateY(180deg);*/
-    transition: 1s;
-    transform: perspective(500px) rotateY(180deg);
-    opacity: 0;
-}
 
-.mealcard:hover > .recipe-div{
-    opacity:1;
-    height: 500px;
-    background-color: #304269;
-}
 
 .recipe-div{
-    background-color: aqua;
     display: grid;
     grid-template-columns: 1fr 1fr ;
     grid-template-rows: 60px auto 1fr;
@@ -354,11 +370,9 @@ svg, .heart span{
 
 .recipe-link{
     grid-column: 1/3;
-    background-color: chartreuse;
 }
 .heart{
     grid-column: 1/3;
-    background-color: chartreuse;
     text-align: left;
 }
 .div_tittle{background-color: rgb(18, 12, 11);
@@ -388,6 +402,7 @@ svg, .heart span{
     }
     .meal-details{
         width: 700px;
+
     }
 }
 
@@ -395,4 +410,77 @@ svg, .heart span{
     #meal{
         grid-template-columns: repeat(3, 1fr);
     }
+}
+
+/* The side navigation menu */
+.favoritesSideBar {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    right: 0;
+    background-color: #304269;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  }
+  
+  /* The navigation menu links */
+  .favoritesSideBar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .favoritesSideBar a:hover {
+    color: #f1f1f1;
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .favoritesSideBar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+/*align items in favorite list */
+.product-list{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.meal-item{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.meal-item h4{
+    color:white;
+}
+.recipe-btn-favorite:hover{
+    font-size: 1.8em;
+}
+select {
+    /* Reset */
+    border: 0;
+    outline: 0;
+    font: inherit;
+    /* Personalize */
+    height: 3em;
+    padding: 0 1em 0 1em;
+    
+    color: #304269;
+    border-radius: 1.5em;
+    box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    /* <option> colors */
+    option {
+      color: inherit;
+    }
+   
 }
