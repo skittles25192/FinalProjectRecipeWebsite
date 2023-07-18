@@ -419,14 +419,12 @@ svg, .heart span{
     grid-template-columns: 1fr;
 }
 .meal-item{
-    background-color: darkgreen;
+    background-color: rgb(158, 208, 158);
     justify-content: center;
-    
+    align-items: center;
+    text-align: center;
 }
 #list_container h4{
     background-color: rgb(255, 242, 0);
-    margin: 40px;
-    margin-bottom: 30px;
-    padding-bottom: 15px;
 }
 
