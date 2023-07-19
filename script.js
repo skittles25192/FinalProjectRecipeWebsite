@@ -92,6 +92,7 @@ function getMealListAll(){
                 <div class = "meal-item" data-id = "${meal.idMeal}">
                         <div id="flip" class = "meal-img">
                             <img  src = "${meal.strMealThumb}" alt = "food">
+                            <p class="teto">hola soy el texto</p>
                         </div>
                         <div class = "meal-name">
                             <h3>${meal.strMeal}</h3>
@@ -129,7 +130,9 @@ function getMealListEnter(e){
     
                     <div class = "meal-item" data-id = "${meal.idMeal}">
                             <div id="flip" class = "meal-img">
+                            <p>hola soy el texto</p>
                                 <img  src = "${meal.strMealThumb}" alt = "food">
+                                
                             </div>
                             <div class = "meal-name">
                                 <h3>${meal.strMeal}</h3>

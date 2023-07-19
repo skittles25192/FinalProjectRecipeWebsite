@@ -44,8 +44,12 @@ header{
     height: 160px;
 }
 .logo-box:hover{
-    background-color: #77ff00;
-    animation: texty .2s ease-in;
+    transition: all 0.65s;
+    /*transform: rotateY(360deg);*/
+}
+.logo-box img:hover{
+    transform: rotateY(360deg);
+    transition: all 0.65s;
 }
 /* @keyframes texty {
     0%{transform: rotateY(180deg);
@@ -55,8 +59,13 @@ header{
         transform: rotateY(0deg);
     }
 } */
+.teto:hover{
+    transform: rotate(-45deg) translate(0px) rotate(-315deg);transition: all 0.65s;
+    
+}
 .logo-box img,   nav ul{
     animation: moving 1s ease-in-out;
+
 }
 @keyframes moving {
     0%{transform: skewX(25deg) translateX(-500px);
@@ -317,6 +326,7 @@ nav a img{
     margin: 0 auto;
     display: block;
 }
+
 .recipe-link{
     margin: 1.4rem 0;
     background-color: #304269;
