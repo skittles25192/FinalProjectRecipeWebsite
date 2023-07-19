@@ -40,6 +40,10 @@ header{
     width: 160px;
     height: 160px;
 }
+.logo-box img:hover{
+    transform: rotateY(360deg);
+    transition: all 0.65s;
+}
 .logo-box img,   nav ul{
     animation: moving 1s ease-in-out;
 }
