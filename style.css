@@ -40,6 +40,16 @@ header{
     width: 160px;
     height: 160px;
 }
+.logo-box img,   nav ul{
+    animation: moving 1s ease-in-out;
+}
+@keyframes moving {
+    0%{transform: skewX(25deg) translateX(-500px);
+    }
+    100%{
+        transform: skewX(0deg);
+    }
+}
 nav a img{
     width: 40px;
     height: 40px;
@@ -448,6 +458,9 @@ svg, .heart span{
 }
 .meal-item h4{
     color:white;
+}
+.recipe-btn-favorite:hover{
+    font-size: 1.8em;
 }
 
 select {
