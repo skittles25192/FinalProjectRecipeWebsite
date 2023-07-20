@@ -164,7 +164,7 @@ nav a img{
     display: block;
 }
 .meal-img :hover{
-    transform: scale(1.6);
+    transform: scale(1.2);
     transition: 1s;
 }
 .meal-name{
