@@ -163,7 +163,7 @@ nav a img{
     width: 100%;
     display: block;
 }
-.meal-img img:hover{
+.meal-img :hover{
     transform: scale(1.1);
 }
 .meal-name{
