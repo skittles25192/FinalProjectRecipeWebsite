@@ -163,7 +163,7 @@ nav a img{
     width: 100%;
     display: block;
 }
-.meal-img :hover{
+.meal-img:hover{
     transform: scale(.9);
     transition: 1s;
 }
