@@ -415,9 +415,15 @@ svg, #heart{
         margin-left: auto;
         margin-right: auto;
     }
+    
+
 }
 
+@media screen and (max-width:202){
+    header{background-color: #304269;}
+}
 @media screen and (min-width: 768px){
+    body{background-color: #336930;}
     #meal{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -425,17 +431,20 @@ svg, #heart{
     }
     .meal-item{
         margin: 0;
+  
     }
     .meal-details{
         width: 700px;
 
     }
+    
 }
 
 @media screen and (min-width: 992px){
     #meal{
         grid-template-columns: repeat(3, 1fr);
     }
+    body{background-color: #ffe209;}
 }
 
 /* The side navigation menu */
